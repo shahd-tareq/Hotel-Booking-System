@@ -16,7 +16,7 @@ The system simulates basic hotel operations such as adding rooms, making a booki
 
 | File           | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
-| `user.dart`    | Contains the `User` class that holds basic user information                |
+| `guest.dart`    | Contains the `Guest` class that holds basic user information                |
 | `room.dart`    | Defines the abstract `Room` class and its subclasses: `SingleRoom`, `DoubleRoom`, `SuiteRoom` |
 | `hotel.dart`   | Defines the `Hotel` class which manages rooms                               |
 | `booking.dart` | Defines the `Booking` class which connects a user to a room                 |
@@ -29,13 +29,13 @@ The system simulates basic hotel operations such as adding rooms, making a booki
 2. A list of available rooms in the hotel is displayed.
 3. The user selects a room and number of nights.
 4. A booking is created and shown to the user.
-5. The user chooses a payment method: either **Credit Card** or **Cash**.
+5. The guest chooses a payment method: either **Credit Card** or **Cash**.
 6. Payment is processed and a confirmation is shown.
 
 ## 🧪 Example Classes
 
 ```dart
-class User {
+class Guest {
   String name;
   String email;
   String phoneNumber;
@@ -47,9 +47,9 @@ class User {
 ```dart
 abstract class Room {
   int roomNumber;
-  double pricePerNight;
+  double priceNight;
 
-  Room({required this.roomNumber, required this.pricePerNight});
+  Room({required this.roomNumber, required this.priceNight});
 }
 ```
 
